@@ -62,10 +62,4 @@ function App() {
 	);
 }
 
-{/* We NEED React-Router */ }
-
-{/* localhost.com/ */ }
-{/* localhost.com/checkout */ }
-{/* localhost.com/login */ }
-
 export default App;

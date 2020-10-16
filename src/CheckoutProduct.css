@@ -3,14 +3,16 @@
   margin: 30px;
 }
 
-.checkoutProduct__image {
+img.checkoutProduct__image {
   object-fit: contain;
   width: 180px;
-  height: 180px;
+  margin-right: 30px;
 }
 
 .checkout__info {
-  padding-left: 20px;
+  
+  padding-left: 30px;
+ 
 }
 
 .checkoutProduct__rating {
