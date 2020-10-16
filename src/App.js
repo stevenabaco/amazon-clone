@@ -6,8 +6,10 @@ import './Header.css';
 import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
+import Payment from './Payment';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
+
 
 function App() {
 	const [{ user }, dispatch] = useStateValue();
@@ -44,12 +46,16 @@ function App() {
 		<Router>
 			<div className='app'>
 				<Switch>
+					<Route path='/login'>
+						<Login />
+					</Route>
 					<Route path='/checkout'>
 						<Header />
 						<Checkout />
 					</Route>
-					<Route path='/login'>
-						<Login />
+					<Route path='/payments'>
+						<Header />
+						<Payment />
 					</Route>
 					{/* This is the default route */}
 					<Route path='/'>
