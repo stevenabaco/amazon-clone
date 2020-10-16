@@ -28,10 +28,10 @@
 }
 
 .product > img {
-  max-height: 200px;
+  max-height: 100px; 
   width: 100%;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 .product > button {
@@ -39,4 +39,16 @@
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
   cursor: pointer;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.product > button:hover {
+  background-color: #ffc635;
+} 
+
+@media only screen and (max-width: 800px) {
+  .product {
+    font-size: 10px;
+  }
 }

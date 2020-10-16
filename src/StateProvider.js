@@ -3,7 +3,7 @@
 
 import React, { createContext, useContext, useReducer } from 'react';
 
-// ***** IS THE DATA LAYER *****
+// ***** THIS IS THE DATA LAYER *****
 export const StateContext = createContext();
 
 // BUILD A PROVIDER

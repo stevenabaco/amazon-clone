@@ -4,25 +4,22 @@ import './Home.css';
 import { useStateValue } from './StateProvider';
 
 
+
 function Home() {
 	const [{ basket, user }] = useStateValue();
 	return (
 		<div className='home'>
-			<img
-				className='home__image'
-				src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'
-				alt=''
-			/>
-			<div className='home__cloneAlert'>
-				<h3>Welcome {user ?.email}</h3>
-				<h5>
-					Please be advised this is a FAKE AMAZON CLONE. It has no affiliation
-					with Amazon.{' '}
-				</h5>
+			<div>
+				<img
+					className='home__image'
+					src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'
+					alt=''
+				/>
 			</div>
+			
 			{/* Product id, title, price, rating, image */}
 			<div className='home__row'>
-				<Product
+					<Product
 					id='1597456852'
 					title='TCL 75" 6-Series 4K UHD Dolby Vision HDR QLED Roku Smart TV - 75R635'
 					price={1399.99}
