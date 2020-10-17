@@ -23,6 +23,7 @@ function App() {
 	// Piece of code which runs based on a given condition
 
 	useEffect(() => {
+		//will only run once when the app component loads...
 		const unsubscribe = auth.onAuthStateChanged((authUser) => {
 			if (authUser) {
 				// the user is logged in ....
@@ -44,8 +45,6 @@ function App() {
 			unsubscribe();
 		};
 	}, []);
-
-	console.log('USER IS >>>>', user);
 
 	return (
 		<Router>
