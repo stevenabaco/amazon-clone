@@ -9,12 +9,17 @@ import Login from './Login';
 import Payment from './Payment';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 
+const promise = loadStripe(
+	'pk_test_51HK4KnIrCJ9ILoAD9V3Yz9zsURSlemoJIr95kbtHefOr8cIQfZl0h2BUCdpaEGC1uBRVIsoCMlx7tigTZMEy1nY000dt8UKmle'
+);
 
 function App() {
 	const [{ user }, dispatch] = useStateValue();
 
-	// useEffect <<<<<<<< Powerful
+	// will only run once when the app component loads...
 	// Piece of code which runs based on a given condition
 
 	useEffect(() => {
@@ -55,7 +60,9 @@ function App() {
 					</Route>
 					<Route path='/payments'>
 						<Header />
-						<Payment />
+						<Elements stripe={promise}>
+								<Payment />
+						</Elements>
 					</Route>
 					{/* This is the default route */}
 					<Route path='/'>
