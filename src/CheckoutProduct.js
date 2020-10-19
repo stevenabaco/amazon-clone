@@ -3,7 +3,7 @@ import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 import CurrencyFormat from 'react-currency-format';
 
-function CheckoutProduct({ id, title, image, price, rating }) {
+function CheckoutProduct({ id, title, image, price, rating, hideButton }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
     // remove item from basket...
@@ -23,11 +23,9 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 					<br/>
 						<CurrencyFormat
 							renderText={(value) => (
-								<>
 									<p>
 										<strong> {value}</strong>
 									</p>
-								</>
 							)}
 							decimalScale={2}
 							value={price}
@@ -41,10 +39,13 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 						{Array(rating)
 							.fill()
 							.map((_, i) => (
-								<p> &#11088; </p>
+								<p> 🌟 </p>
 							))}
 					</div>
-					<button onClick={removeFromBasket}>Remove from basket</button>
+					{!hideButton && (
+						<button onClick={removeFromBasket}>Remove from basket</button>
+					)}
+				
 				</div>
 			</div>
 		</div>

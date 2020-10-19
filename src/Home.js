@@ -16,10 +16,10 @@ function Home() {
 					alt=''
 				/>
 			</div>
-			
+
 			{/* Product id, title, price, rating, image */}
 			<div className='home__row'>
-					<Product
+				<Product
 					id='15974564852'
 					title='TCL 75" 6-Series 4K UHD Dolby Vision HDR QLED Roku Smart TV - 75R635'
 					price={1399.99}
@@ -28,8 +28,8 @@ function Home() {
 				/>
 				<Product
 					id='65784556385'
-					title='Echo Show 5 -- Smart display with Alexa – stay connected with video calling - Charcoal'
-					price={74.99}
+					title='Echo Show 5 - Smart display with Alexa – stay connected with video calling - Charcoal'
+					price={95.25}
 					rating={4}
 					image='https://m.media-amazon.com/images/I/716neMnDXXL._AC_UY436_FMwebp_QL65_.jpg'
 				/>

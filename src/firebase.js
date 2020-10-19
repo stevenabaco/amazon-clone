@@ -1,7 +1,6 @@
 import firebase from "firebase";
 
-const firebaseApp = firebase.initializeApp({
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfing = {
 
   apiKey: "AIzaSyBDgWmeZFaZJiRCxIIsTtINZwtQuVK7Me8",
   authDomain: "clone-71e58.firebaseapp.com",
@@ -11,9 +10,11 @@ const firebaseApp = firebase.initializeApp({
   messagingSenderId: "808227911053",
   appId: "1:808227911053:web:daf39ed68ca4c137f4f9c4",
   measurementId: "G-L8C5MJELGY"
+};
 
-})
-
+const firebaseApp = firebase.initializeApp(firebaseConfing);
+const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
-export { auth };
+
+export { db, auth };
