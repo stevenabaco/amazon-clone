@@ -14,6 +14,10 @@
   text-decoration: none;
 }
 
+.payment__priceContainer {
+  margin: 30px;
+}
+
 .payment__section {
   display: flex;
   padding: 20px;
@@ -47,4 +51,9 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color:#111;
+}
+
+.payment__details form p{
+  color: red;
+  margin-bottom: 30px;
 }

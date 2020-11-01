@@ -41,6 +41,7 @@
   cursor: pointer;
   border-radius: 3px;
   padding: 5px;
+  margin: 50px;
 }
 
 .product > button:hover {

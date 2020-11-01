@@ -124,8 +124,11 @@ function Payment() {
 					<div className='payment__details'>
 						{/* STRIPE MAGIC will go here */}
 						<form onSubmit={handleSubmit}>
-							<CardElement onChange={handleChange} />
+							<p className='payment__warning'>WARNING : This is not a real purchase. Please keep pressing "42" for credit card info until all input fields are full</p><CardElement onChange={handleChange} />
+					
 							<div className='payment__priceContainer'>
+								
+								
 								<CurrencyFormat
 									renderText={(value) => <h3>Order Total: {value}</h3>}
 									decimalScale={2}
@@ -137,6 +140,7 @@ function Payment() {
 								<button disabled={processing || disabled || succeeded}>
 									<span>{processing ? <p>Processing...</p> : 'Buy Now'}</span>
 								</button>
+						
 							</div>
 							{/* **** Error Handling **** */}
 							{error && <div>{error}</div>}

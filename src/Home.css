@@ -1,14 +1,19 @@
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1500px;
 }
 
 .home__image {
   width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
   z-index: -1;
-  margin-bottom: -150px;
+  margin-bottom: -100px;
+
 }
 
 .home__row {
@@ -26,11 +31,22 @@
   z-index: 10;
 }
 
-div.product:hover {
+.product:hover {
     /* transform: translate3d(0, -1px, 0); */
     box-shadow: 0rem 2rem 2rem 0rem rgba(82, 82, 82, 0.25);
     transition: all 0.25s ease;
 }
+
+.product img {
+  transition: transform .20s ease-in-out;
+}
+
+.product img:hover {
+  transform: scale(1.25);
+  cursor: zoom-in ;
+}
+
+
 
 @media only screen and (max-width: 800px) {
   .home__cloneAlert {
